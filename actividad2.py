@@ -2,7 +2,11 @@ from turtle import *
 from random import randrange
 from freegames import square, vector
 
-food = vector(0, 0)
+a = randrange(-200,100,10)
+b = randrange(-200,100,10)
+food = vector(a,b)
+"Agrego variables a y b para que pasen por un randrange para que cada vez que se inicie el juego la comida no estara en el mismo lugar."
+
 snake = [vector(10, 0)]
 aim = vector(0, -10)
 
