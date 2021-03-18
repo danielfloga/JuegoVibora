@@ -4,9 +4,44 @@ from turtle import *
 from random import randrange
 from freegames import square, vector
 
-food = vector(0, 0)
+a = randrange(-200,100,10)
+b = randrange(-200,100,10)
+food = vector(a,b)
+"Agrego variables a y b para que pasen por un randrange para que cada vez que se inicie el juego la comida no estara en el mismo lugar."
+
 snake = [vector(10, 0)]
 aim = vector(0, -10)
+
+c= randrange(1,5)
+
+"Genero una variable aleatoria para despues adignarle un color dependiendo del numero con funciones '/if/'"
+
+    
+if c==1:
+    c="black"
+if c==2:
+    c="green"
+if c==3:
+    c="blue"
+if c==4:
+    c="magenta"
+if c==5:
+    c="cyan"
+        
+a= randrange(1,5)
+
+"Genero una variable aleatoria para despues adignarle un color dependiendo del numero con funciones '/if/'"
+    
+if a==1:
+    a="black"
+if a==2:
+    a="green"
+if a==3:
+    a="blue"
+if a==4:
+    a="magenta"
+if a==5:
+    a="cyan"
 
 def change(x, y):
     "Change snake direction."
@@ -37,11 +72,15 @@ def move():
         snake.pop(0)
 
     clear()
+    
+    
 
     for body in snake:
-        square(body.x, body.y, 9, 'black')
+        square(body.x, body.y, 9, c)
+    
+    
 
-    square(food.x, food.y, 9, 'green')
+    square(food.x, food.y, 9, a)
     update()
     ontimer(move, 100)
 
