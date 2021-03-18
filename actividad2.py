@@ -1,3 +1,5 @@
+"Este juego es el juego de la vibora"
+"Autores: Alejandro Torre, Daniel Flores"
 from turtle import *
 from random import randrange
 from freegames import square, vector
